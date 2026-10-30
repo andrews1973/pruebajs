@@ -12,15 +12,10 @@ pseudocodigo
 
 // array.join(separador); ?
 // split() ?
-// map () ?
+// toUpperCase()?
 
-/*
-    let palabraMayuscula = palabra.toUpperCase()
-    let palabraArray = palabraMayuscula.split(" ")
-    let palabraEspacios = palabraArray.map((letra)=>letra = letra.toUpperCase() + " ")
-    .....
-*/
-// mas facil con for o con for of
+// supongamos que no conocemos las funciones split ni join: usamos for o con for of
+
 function trasformarMayusculas (palabra){
     let palabraMayuscula = "";
     for (let i=0; i<palabra.length; i++){
@@ -52,9 +47,6 @@ function transformarMausculasj (palabra) {
 
 console.log(transformarMausculasj ('ana'));
 console.log(transformarMausculasj ('Maider'));
-
-// habra un espacio tambien en la ultima palabra... podriamos detectar la ultima y decirle que ese caso sin espacio, algo asi...
-// if (palabra[i] == palabra[length-1]) palabraMayuscula = palabraMayuscula + letra.toUpperCase()
 
 
 /*
