@@ -17,6 +17,7 @@ pseudocodigo
 // supongamos que no conocemos las funciones split ni join: usamos for o con for of
 console.log('EJERCICIO 1');
 
+// con for 
 function trasformarMayusculas (palabra){
     let palabraMayuscula = "";
     for (let i=0; i<palabra.length; i++){
@@ -40,7 +41,7 @@ function trasformarMayusculafo (palabra){
 console.log(trasformarMayusculafo ('hector'));
 console.log(trasformarMayusculafo ('andres'));
 
-// con map que nos devuelve un array
+// con map que nos devuelve un array, con foreAch seria parecido pero habria que crear un nuevo array e ir puseando
 
 function trasformarMayusculafe (palabra){
     let arrayMayuscula = palabra.toUpperCase().split(''); // transforma a array mayuscula
@@ -48,17 +49,17 @@ function trasformarMayusculafe (palabra){
         return elemento + " ";
     }) 
     
-    return nuevoArray.join(""); // convertimos a strin el array
+    return nuevoArray.join(""); // convertimos a string el array
 } 
 
 console.log(trasformarMayusculafe ('ana'));
 console.log(trasformarMayusculafe ('hector'));
 
-// con funcion split y join lo mas sencillo 
+// con la funcion split y join lo mas sencillo 
 // 1- transformar string a mayusculas, 2- transformar string a array, 3 transformar de nuevo a string con un espacio
 
 function transformarMausculasj (palabra) {
-    return palabra.toUpperCase().split('').join(' ');
+    return palabra.toUpperCase().split("").join(" ");
 }
 
 console.log(transformarMausculasj ('ana'));
@@ -70,14 +71,7 @@ console.log(); // separar el ejercicio
 Ejercicio 2
 Declara una función que acepte un nombre como parámetro y devuelva el número de palabras que tiene el nombre. Ejemplo: Para "Antonio Alberto Jesús" devolverá 3.
 
-
 1- declarar una fuction con un parametro que sera el string del que debemos contar las palabras
-2- recorrer ese string y contar el numero de espacios que tiene y podremos saber las palabras siempre que no haya espacio al final ni al principio. 
-3 - para ello podriamos ignorar un espacio al principio y al final si es que lo hay con algun condicional...
-
-se me acaba de ocurrir otra estrategia mucho mas sencilla...:
-
-1- igual, declaramos funcion...
 2- con la funcion split podemos converitir a array ese string
 3- el tamaño del array, elementos que componen el array seria es el numero de palabras
 
