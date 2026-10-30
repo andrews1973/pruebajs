@@ -15,6 +15,7 @@ pseudocodigo
 // toUpperCase()?
 
 // supongamos que no conocemos las funciones split ni join: usamos for o con for of
+console.log('EJERCICIO 1');
 
 function trasformarMayusculas (palabra){
     let palabraMayuscula = "";
@@ -36,8 +37,22 @@ function trasformarMayusculafo (palabra){
     }
     return `Transformamos ${palabra} en: ` + palabraMayuscula
 }
-console.log(trasformarMayusculafo ('ana'));
-console.log(trasformarMayusculafo ('Maider'));
+console.log(trasformarMayusculafo ('hector'));
+console.log(trasformarMayusculafo ('andres'));
+
+// con map que nos devuelve un array
+
+function trasformarMayusculafe (palabra){
+    let arrayMayuscula = palabra.toUpperCase().split(''); // transforma a array mayuscula
+    let nuevoArray = arrayMayuscula.map((elemento)=>{
+        return elemento + " ";
+    }) 
+    
+    return nuevoArray.join(""); // convertimos a strin el array
+} 
+
+console.log(trasformarMayusculafe ('ana'));
+console.log(trasformarMayusculafe ('hector'));
 
 // con funcion split y join lo mas sencillo 
 // 1- transformar string a mayusculas, 2- transformar string a array, 3 transformar de nuevo a string con un espacio
@@ -47,7 +62,7 @@ function transformarMausculasj (palabra) {
 }
 
 console.log(transformarMausculasj ('ana'));
-console.log(transformarMausculasj ('Maider'));
+console.log(transformarMausculasj ('andres'));
 console.log(); // separar el ejercicio
 
 
@@ -67,6 +82,7 @@ se me acaba de ocurrir otra estrategia mucho mas sencilla...:
 3- el tamaño del array, elementos que componen el array seria es el numero de palabras
 
 */
+console.log('EJERCICIO 2');
 
 function contarPalabras (string){
     let texto = string;
@@ -90,6 +106,7 @@ Diseña un algoritmo que cuente las veces que aparece una determinada letra en u
 5 - devolvermos el contador
 
 */
+console.log('EJERCICIO 3');
 
 function contarLetra (frase, letra){
     let contador = 0;
@@ -120,5 +137,5 @@ function contarLetrafo (string, letra){
     return `el numero de ${letra} que aparecen en la frase ${string} es : ${contador}`;
 }
 
-console.log(contarLetrafo ('casa', 'a'));
-console.log(contarLetrafo ('casa esta pintada de blanco', 'a'));
+console.log(contarLetrafo ('coche', 'o'));
+console.log(contarLetrafo ('el coche esta pintado de blanco', 'o'));
