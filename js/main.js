@@ -39,7 +39,8 @@ function trasformarMayusculafo (palabra){
 console.log(trasformarMayusculafo ('ana'));
 console.log(trasformarMayusculafo ('Maider'));
 
-// con funcion split y join lo mas sencillo
+// con funcion split y join lo mas sencillo 
+// 1- transformar string a mayusculas, 2- transformar string a array, 3 transformar de nuevo a string con un espacio
 
 function transformarMausculasj (palabra) {
     return palabra.toUpperCase().split('').join(' ');
@@ -47,6 +48,7 @@ function transformarMausculasj (palabra) {
 
 console.log(transformarMausculasj ('ana'));
 console.log(transformarMausculasj ('Maider'));
+console.log(); // separar el ejercicio
 
 
 /*
@@ -58,10 +60,10 @@ Declara una función que acepte un nombre como parámetro y devuelva el número 
 2- recorrer ese string y contar el numero de espacios que tiene y podremos saber las palabras siempre que no haya espacio al final ni al principio. 
 3 - para ello podriamos ignorar un espacio al principio y al final si es que lo hay con algun condicional...
 
-se me acaba de ocurrir otra estrategia...:
+se me acaba de ocurrir otra estrategia mucho mas sencilla...:
 
 1- igual, declaramos funcion...
-2- con la funcion split podriamos converitir a array ese string
+2- con la funcion split podemos converitir a array ese string
 3- el tamaño del array, elementos que componen el array seria es el numero de palabras
 
 */
@@ -69,10 +71,13 @@ se me acaba de ocurrir otra estrategia...:
 function contarPalabras (string){
     let texto = string;
     const textoArray = texto.split(" ");
-    console.log(textoArray );
+    //console.log(textoArray );
     return 'El número de palabras es: ' + textoArray.length;
 }
+
 console.log(contarPalabras ('Antonio Alberto Jesús'));
+console.log(contarPalabras ('Lorem ipsum dolor sit amet, consectetur adipiscing elit'));
+console.log(); // separar el ejercicio
 
 /*
 Ejercicio 3:
