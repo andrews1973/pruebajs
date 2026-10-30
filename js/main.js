@@ -44,6 +44,15 @@ function trasformarMayusculafo (palabra){
 console.log(trasformarMayusculafo ('ana'));
 console.log(trasformarMayusculafo ('Maider'));
 
+// con funcion split y join lo mas sencillo
+
+function transformarMausculasj (palabra) {
+    return palabra.toUpperCase().split('').join(' ');
+}
+
+console.log(transformarMausculasj ('ana'));
+console.log(transformarMausculasj ('Maider'));
+
 // habra un espacio tambien en la ultima palabra... podriamos detectar la ultima y decirle que ese caso sin espacio, algo asi...
 // if (palabra[i] == palabra[length-1]) palabraMayuscula = palabraMayuscula + letra.toUpperCase()
 
